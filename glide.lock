@@ -1,0 +1,32 @@
+hash: 2b8bb12dd65ae836fb729b85cce3cfb9c1d18ac95c18cd585868f56060ebd62c
+updated: 2016-11-09T21:40:03.251223219+05:30
+imports:
+- name: github.com/golang/protobuf
+  version: 4bd1920723d7b7c925de087aa32e2187708897f7
+  subpackages:
+  - proto
+- name: github.com/yadavparmatma/login-contractor
+  version: dcb6a6acc8993c5a65c7884b68e7621a941f48c8
+- name: golang.org/x/net
+  version: 40d3034e575b6eafbca34e64224da61de35ae04c
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
+- name: google.golang.org/grpc
+  version: eddbd11c7ecd001d06777cb87b5ea7af54227907
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - metadata
+  - naming
+  - peer
+  - tap
+  - transport
+testImports: []

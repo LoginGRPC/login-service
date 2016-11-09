@@ -1,0 +1,8 @@
+package: yadavparmatma/login-service
+import:
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+- package: github.com/yadavparmatma/login-contractor
+  version: ^v1.0.0
