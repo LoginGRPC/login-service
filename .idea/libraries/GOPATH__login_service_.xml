@@ -6,6 +6,8 @@
       <root url="file://$PROJECT_DIR$/../../github.com" />
       <root url="file://$PROJECT_DIR$/../../gopkg.in" />
       <root url="file://$PROJECT_DIR$/.." />
+      <root url="file://$PROJECT_DIR$/../../bitbucket.org" />
+      <root url="file://$PROJECT_DIR$/../../git.periscope-solutions.com" />
     </CLASSES>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../golang.org" />
@@ -13,6 +15,8 @@
       <root url="file://$PROJECT_DIR$/../../github.com" />
       <root url="file://$PROJECT_DIR$/../../gopkg.in" />
       <root url="file://$PROJECT_DIR$/.." />
+      <root url="file://$PROJECT_DIR$/../../bitbucket.org" />
+      <root url="file://$PROJECT_DIR$/../../git.periscope-solutions.com" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />

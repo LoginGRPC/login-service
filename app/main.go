@@ -8,22 +8,24 @@ import (
 	"google.golang.org/grpc"
 
 	sdk "github.com/LoginGRPC/login-contractor"
+	"github.com/facebookgo/inject"
 )
 
 const (
 	port = ":5005"
 )
 
-type server struct{}
+type Server struct{
 
+}
 
-func (s *server) Ping(ctx context.Context, in *sdk.PingRequest) (*sdk.PingResponse, error) {
+func (s *Server) Ping(ctx context.Context, in *sdk.PingRequest) (*sdk.PingResponse, error) {
 	return &sdk.PingResponse{Message: "Hello " + in.UserName}, nil
 }
 
-func (s *server) GetUserProfile(ctx context.Context, in *sdk.PingRequest) (*sdk.PingResponse, error) {
-	return &sdk.LoginResponse{Result: true, User:*sdk.UserProfile{
-		"123","Parmatma",123456789,
+func (s *Server) GetUserProfile(ctx context.Context, in *sdk.PingRequest) (*sdk.PingResponse, error) {
+	return &sdk.LoginResponse{Result: true, User: *sdk.UserProfile{
+		"123", "Parmatma", 123456789,
 	}}, nil
 }
 
@@ -33,7 +35,18 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	s := grpc.NewServer()
-	sdk.RegisterUserServiceServer(s, &server{})
+	sdk.RegisterUserServiceServer(s, &Server{})
+
+	var g inject.Graph
+	var userService Server
+	err = g.Provide(
+		&inject.Object{Value: &userService},
+	)
+
+	if err = g.Populate(); err != nil {
+		panic(err)
+	}
+
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}

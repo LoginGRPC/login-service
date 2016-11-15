@@ -1,14 +1,16 @@
-hash: 12335f10d0663fb099604eaa4171259b7af19ba142ae9e863bd3852faf4ab7cc
-updated: 2016-11-10T11:18:51.493019783+05:30
+hash: c21800a34f820ccf44809ed8013e783d8e6084dec22eedfc7754895dd7d5bb39
+updated: 2016-11-15T16:30:42.66219479+05:30
 imports:
+- name: github.com/facebookgo/inject
+  version: cc1aa653e50f6a9893bcaef89e673e5b24e1e97b
 - name: github.com/golang/protobuf
-  version: 4bd1920723d7b7c925de087aa32e2187708897f7
+  version: 98fa357170587e470c5f27d3c3ea0947b71eb455
   subpackages:
   - proto
 - name: github.com/LoginGRPC/login-contractor
   version: 34b3ce99e039accd1d1aff459563e1a5b443ffa5
 - name: golang.org/x/net
-  version: 40d3034e575b6eafbca34e64224da61de35ae04c
+  version: f09c4662a0bd6bd8943ac7b4931e185df9471da4
   subpackages:
   - context
   - http2
@@ -18,7 +20,7 @@ imports:
   - lex/httplex
   - trace
 - name: google.golang.org/grpc
-  version: eddbd11c7ecd001d06777cb87b5ea7af54227907
+  version: 777daa17ff9b5daef1cfdf915088a2ada3332bf0
   subpackages:
   - codes
   - credentials
@@ -27,6 +29,5 @@ imports:
   - metadata
   - naming
   - peer
-  - tap
   - transport
 testImports: []

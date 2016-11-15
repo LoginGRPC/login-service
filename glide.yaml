@@ -6,3 +6,4 @@ import:
 - package: google.golang.org/grpc
 - package: github.com/LoginGRPC/login-contractor
   version: ^v1.0.0
+- package: github.com/facebookgo/inject
